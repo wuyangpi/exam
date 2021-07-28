@@ -1,7 +1,19 @@
 <?php
+use \MyGreeter\Client;
 
 class MyGreeter_Client_Test extends \PHPUnit_Framework_TestCase
 {
+    public $greeter;
+    
+    /**
+     * 20210728
+     * @param \MyGreeter\Client $greeter
+     */
+    public function __construct(\MyGreeter\Client $greeter)
+    {
+        $this->greeter = $greeter;
+    }
+    
     public function setUp()
     {
         $this->greeter = new \MyGreeter\Client();
@@ -22,3 +34,4 @@ class MyGreeter_Client_Test extends \PHPUnit_Framework_TestCase
         );
     }
 }
+
